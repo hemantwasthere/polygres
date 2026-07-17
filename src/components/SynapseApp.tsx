@@ -264,7 +264,7 @@ export function SynapseApp({ initialData }: { initialData: DashboardData }) {
                 <textarea
                   value={question}
                   onChange={(event) => setQuestion(event.target.value)}
-                  className="min-h-28 w-full resize-none border border-hairline bg-surface-inset p-3 text-sm leading-6 text-ink-50 focus:border-synapse/50"
+                  className="min-h-28 w-full resize-none border border-hairline bg-surface-inset p-3 text-sm leading-6 text-ink-50"
                 />
                 <button
                   type="submit"
