@@ -33,7 +33,7 @@ export function GraphCanvas({
     return (
       <div
         className={cn(
-          "flex aspect-[1.52] min-h-[360px] flex-col items-center justify-center gap-2 border border-hairline bg-surface-inset text-sm text-ink-600",
+          "flex aspect-[1.52] min-h-[360px] w-full flex-col items-center justify-center gap-2 border border-hairline bg-surface-inset text-sm text-ink-600",
           className
         )}
       >
