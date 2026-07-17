@@ -1,0 +1,43 @@
+{
+  "name": "polygres-synapse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Polygres Synapse — personal knowledge graph with graph traversal and semantic search.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:setup": "tsx scripts/setup-db.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:reset": "tsx scripts/reset-db.ts",
+    "db:local:start": "pg_ctl -D .local-postgres -l postgres.log -o \"-p 55432\" start",
+    "db:local:stop": "pg_ctl -D .local-postgres stop",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "clsx": "latest",
+    "date-fns": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "pg": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwind-merge": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "latest",
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/pg": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "tailwindcss": "latest",
+    "tsx": "latest",
+    "typescript": "7.0.2",
+    "vitest": "latest"
+  }
+}

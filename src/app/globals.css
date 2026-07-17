@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* colors */
+  --color-void: #0a0d12;
+  --color-surface: #12161d;
+  --color-surface-raised: #191f28;
+  --color-surface-inset: #0d1117;
+  --color-hairline: rgba(255, 255, 255, 0.08);
+
+  --color-ink-50: #f3f5f8;
+  --color-ink-200: #d7dce5;
+  --color-ink-400: #9aa3b2;
+  --color-ink-600: #6b7280;
+  --color-ink-800: #3a404c;
+
+  --color-synapse: #57e8c8;
+  --color-synapse-soft: rgba(87, 232, 200, 0.12);
+  --color-signal: #f2a94d;
+  --color-signal-soft: rgba(242, 169, 77, 0.12);
+  --color-violet: #9b87f5;
+  --color-violet-soft: rgba(155, 135, 245, 0.12);
+  --color-coral: #ff7a6b;
+  --color-coral-soft: rgba(255, 122, 107, 0.12);
+  --color-blueprint: #6fa8ff;
+  --color-blueprint-soft: rgba(111, 168, 255, 0.12);
+
+  /* fonts */
+  --font-display: "IBM Plex Mono", ui-monospace, monospace;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* radius */
+  --radius-sm: 3px;
+  --radius: 5px;
+  --radius-lg: 8px;
+
+  /* shadow */
+  --shadow-glow:
+    0 0 0 1px rgba(87, 232, 200, 0.35), 0 0 28px rgba(87, 232, 200, 0.22);
+
+  /* animation */
+  --animate-pulse-ring: pulse-ring 1.8s ease-out infinite;
+  --animate-signal-flow: signal-flow 1s linear infinite;
+  --animate-fade-up: fade-up 0.25s ease-out;
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+@keyframes signal-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:root {
+  --font-sans-var: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono-display: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0a0d12;
+  background-image:
+    radial-gradient(
+      ellipse 900px 500px at 15% -10%,
+      rgba(87, 232, 200, 0.07),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 700px 500px at 100% 0%,
+      rgba(155, 135, 245, 0.05),
+      transparent 55%
+    );
+  color: #f3f5f8;
+  font-family: var(--font-sans-var);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(87, 232, 200, 0.28);
+  color: #f3f5f8;
+}
+
+:focus-visible {
+  outline: 2px solid #57e8c8;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 3px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+.node-label {
+  font-family: var(--font-mono-display);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
