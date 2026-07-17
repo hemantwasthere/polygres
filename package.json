@@ -37,7 +37,7 @@
     "eslint-config-next": "latest",
     "tailwindcss": "latest",
     "tsx": "latest",
-    "typescript": "7.0.2",
+    "typescript": "6.0.3",
     "vitest": "latest"
   }
 }
