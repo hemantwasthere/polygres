@@ -199,7 +199,7 @@ export function SynapseApp({ initialData }: { initialData: DashboardData }) {
               <button
                 type="submit"
                 disabled={isPending || captureText.trim().length < 3}
-                className="inline-flex h-10 w-full items-center justify-center gap-2 bg-synapse px-3 font-mono text-sm font-bold uppercase tracking-wide text-void transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+                className="inline-flex h-10 w-full items-center justify-center gap-2 bg-synapse px-3 font-mono text-sm font-bold uppercase tracking-wide cursor-pointer text-void transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
                 title="Capture memory"
               >
                 {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <DatabaseZap className="h-4 w-4" />}
@@ -269,7 +269,7 @@ export function SynapseApp({ initialData }: { initialData: DashboardData }) {
                 <button
                   type="submit"
                   disabled={isPending || question.trim().length < 3}
-                  className="inline-flex h-10 w-full items-center justify-center gap-2 bg-coral px-3 font-mono text-sm font-bold uppercase tracking-wide text-void transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 bg-coral px-3 font-mono text-sm font-bold uppercase tracking-wide text-void cursor-pointer transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
                   title="Ask Synapse"
                 >
                   {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <BrainCircuit className="h-4 w-4" />}
@@ -317,7 +317,7 @@ export function SynapseApp({ initialData }: { initialData: DashboardData }) {
                 />
                 <button
                   type="submit"
-                  className="inline-flex h-10 w-10 items-center justify-center bg-synapse text-void transition-opacity hover:opacity-90"
+                  className="inline-flex cursor-pointer h-10 w-10 items-center justify-center bg-synapse text-void transition-opacity hover:opacity-90"
                   title="Search"
                 >
                   <Search className="h-4 w-4" />
